@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import com.ibm.RequestTravelPlanWebBFF.dto.UserRequestData;
 
 @Service
-public class RequestTravelPlanWebBFFServie {
+public class RequestTravelPlanWebBFFService {
 
 	public UserRequestData travelRequest(UserRequestData userRequestData) {
 		// TODO Auto-generated method stub

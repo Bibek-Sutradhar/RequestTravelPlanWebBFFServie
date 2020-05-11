@@ -8,19 +8,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ibm.RequestTravelPlanWebBFF.dto.UserRequestData;
-import com.ibm.RequestTravelPlanWebBFF.service.RequestTravelPlanWebBFFServie;
+import com.ibm.RequestTravelPlanWebBFF.service.RequestTravelPlanWebBFFService;
 
 @CrossOrigin(origins="*")
 @RestController
 public class RequestTravelPlanWebBFFController {
 
 	@Autowired
-	RequestTravelPlanWebBFFServie requestTravelPlanWebBFFServie;
+	RequestTravelPlanWebBFFService requestTravelPlanWebBFFService;
 
 	@PostMapping(value="/requestTravel")
 	public ResponseEntity<UserRequestData> travelRequest( @RequestBody UserRequestData userRequestData) {			
 		
 		 
-        return ResponseEntity.ok().body(requestTravelPlanWebBFFServie.travelRequest(userRequestData)); 
+        return ResponseEntity.ok().body(requestTravelPlanWebBFFService.travelRequest(userRequestData)); 
     }
 }

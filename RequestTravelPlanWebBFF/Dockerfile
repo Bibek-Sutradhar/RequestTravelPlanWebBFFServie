@@ -12,5 +12,5 @@ RUN mvn install
 FROM openjdk:8-jre-alpine
 WORKDIR /app
 EXPOSE 8891
-COPY --from=build /app/target/RequestTravelPlanWebBFFServie-1.0.jar /app
-CMD ["java", "-jar", "RequestTravelPlanWebBFFServie-1.0.jar"]
+COPY --from=build /app/target/RequestTravelPlanWebBFF-1.0.jar /app
+CMD ["java", "-jar", "RequestTravelPlanWebBFF-1.0.jar"]
