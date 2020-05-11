@@ -5,7 +5,7 @@ RUN git clone https://github.com/Bibek-Sutradhar/RequestTravelPlanWebBFFServie.g
 
 FROM maven:3.5-jdk-8-alpine as build
 WORKDIR /app
-COPY --from=clone /usr/src/RequestTravelPlanWebBFFServie/RequestTravelPlanWebBFFServie /app
+COPY --from=clone /usr/src/RequestTravelPlanWebBFFServie/RequestTravelPlanWebBFF /app
 RUN mvn install
 
 
